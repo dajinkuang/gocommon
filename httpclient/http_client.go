@@ -6,7 +6,7 @@ import (
 	"crypto/tls"
 	"github.com/dajinkuang/dlog"
 	"github.com/dajinkuang/errors"
-	"github.com/dajinkuang/util"
+	"github.com/dajinkuang/util/httpclientutil"
 	"io/ioutil"
 	"net/http"
 	"time"
@@ -18,7 +18,7 @@ type HttpClient struct {
 
 func NewHttpClient(timeout time.Duration) (httpClient *HttpClient) {
 	httpClient = &HttpClient{
-		util.HttpClient,
+		httpclientutil.HttpClient,
 	}
 	if timeout > 0 {
 		httpClient.Timeout = timeout
