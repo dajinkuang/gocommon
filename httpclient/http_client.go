@@ -23,7 +23,7 @@ func NewHttpClient(timeout time.Duration) (httpClient *HttpClient) {
 	if timeout > 0 {
 		httpClient.Timeout = timeout
 	} else {
-		httpClient.Timeout = 5 * time.Second
+		httpClient.Timeout = 4 * time.Second
 	}
 	return
 }
