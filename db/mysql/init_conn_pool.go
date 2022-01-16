@@ -7,6 +7,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
+// InitConnPool 连接MySQL
 func InitConnPool(dsn string, maxOpen, maxIdle int) (__DB *sql.DB) {
 	var err error
 	__DB, err = sql.Open("mysql", dsn)
@@ -27,5 +28,5 @@ func InitConnPool(dsn string, maxOpen, maxIdle int) (__DB *sql.DB) {
 			panic(err)
 		}
 	}()
-	return
+	return __DB
 }

@@ -4,12 +4,13 @@ import (
 	"bytes"
 	"context"
 	"crypto/tls"
-	"github.com/dajinkuang/dlog"
-	"github.com/dajinkuang/errors"
-	"github.com/dajinkuang/util/httpclientutil"
 	"io/ioutil"
 	"net/http"
 	"time"
+
+	"github.com/dajinkuang/dlog"
+	"github.com/dajinkuang/errors"
+	"github.com/dajinkuang/util/httpclientutil"
 )
 
 type HttpClient struct {
